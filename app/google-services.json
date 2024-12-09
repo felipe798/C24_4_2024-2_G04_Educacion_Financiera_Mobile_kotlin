@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "952211582",
+    "project_id": "finangod1",
+    "storage_bucket": "finangod1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952211582:android:9f95d02b523aeb0850a02f",
+        "android_client_info": {
+          "package_name": "com.principe.felipe.finango_d1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "952211582-h4e38h69f710tpeiv87vj059hrbjgtj6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.principe.felipe.finango_d1",
+            "certificate_hash": "7a740716b066dde5df546e9b11b7082642ebf421"
+          }
+        },
+        {
+          "client_id": "952211582-qp3s4tjfmnn5ap365ogroq0kmucj0b1t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBj0tuJISRFeSFYiXrqUkOVsJoMWBWOZss"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "952211582-qp3s4tjfmnn5ap365ogroq0kmucj0b1t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

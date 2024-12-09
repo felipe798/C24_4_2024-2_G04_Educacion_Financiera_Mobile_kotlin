@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Finango_d1</string>
+    <string name="default_web_client_id">952211582-qp3s4tjfmnn5ap365ogroq0kmucj0b1t.apps.googleusercontent.com</string>
+    <string name="exam_question">¿Cuál es el concepto de finanzas?</string>
+    <string name="option1">Ahorro</string>
+    <string name="option2">Inversión</string>
+    <string name="option3">Planificación</string>
+    <string name="option4">Todas las anteriores</string>
+    <string name="submit_button">Enviar</string>
+
+</resources>
