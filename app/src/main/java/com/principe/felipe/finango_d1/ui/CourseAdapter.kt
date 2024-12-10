@@ -4,7 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.principe.felipe.finango_d1.modelos.Course
+import com.principe.felipe.finango_d1.model.Course
 import com.principe.felipe.finango_d1.databinding.ItemCourseBinding
 
 class CourseAdapter(

@@ -60,5 +60,11 @@ class HomeActivity : AppCompatActivity() {
             val intent = Intent(this, CryptoListActivity::class.java)
             startActivity(intent)
         }
+
+        binding.btnChat.setOnClickListener {
+            val intent = Intent(this, ChatActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

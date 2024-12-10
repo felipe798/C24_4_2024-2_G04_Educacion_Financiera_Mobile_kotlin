@@ -1,16 +1,17 @@
 package com.principe.felipe.finango_d1.ViewModel
 
-import androidx.lifecycle.ViewModel
+
 import androidx.lifecycle.viewModelScope
 import com.principe.felipe.finango_d1.repository.CourseRepository
-import com.principe.felipe.finango_d1.modelos.Course
-import com.principe.felipe.finango_d1.modelos.Comment
-import com.principe.felipe.finango_d1.modelos.Module
-import com.principe.felipe.finango_d1.modelos.Topic
+import com.principe.felipe.finango_d1.model.Course
+import com.principe.felipe.finango_d1.model.Module
+import com.principe.felipe.finango_d1.model.Topic
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import android.util.Log
+import androidx.lifecycle.ViewModel
+import com.principe.felipe.finango_d1.modelo.Comment
 
 class CourseViewModel(private val repository: CourseRepository) : ViewModel() {
 

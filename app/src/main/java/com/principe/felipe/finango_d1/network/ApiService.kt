@@ -1,7 +1,7 @@
 package com.principe.felipe.finango_d1.network
 
 
-import com.principe.felipe.finango_d1.modelos.Crypto
+import com.principe.felipe.finango_d1.model.Crypto
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.Query

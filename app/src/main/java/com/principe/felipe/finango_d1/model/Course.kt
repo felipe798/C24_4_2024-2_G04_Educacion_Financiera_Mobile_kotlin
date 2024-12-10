@@ -1,4 +1,6 @@
-package com.principe.felipe.finango_d1.modelos
+package com.principe.felipe.finango_d1.model
+
+import com.principe.felipe.finango_d1.modelo.Comment
 
 data class Course(
     val id: String = "",

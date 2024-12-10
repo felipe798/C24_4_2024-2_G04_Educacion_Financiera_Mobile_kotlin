@@ -3,7 +3,7 @@ package com.principe.felipe.finango_d1.ui
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.principe.felipe.finango_d1.modelos.Topic
+import com.principe.felipe.finango_d1.model.Topic
 import com.principe.felipe.finango_d1.databinding.ItemTopicBinding
 
 class TopicAdapter : RecyclerView.Adapter<TopicAdapter.TopicViewHolder>() {

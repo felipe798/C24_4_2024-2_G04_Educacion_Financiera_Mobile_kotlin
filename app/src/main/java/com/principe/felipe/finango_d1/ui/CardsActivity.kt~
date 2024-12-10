@@ -1,0 +1,53 @@
+package com.principe.felipe.finango_d1.ui
+
+import MapsActivity
+import android.content.Intent
+import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import com.principe.felipe.finango_d1.R
+import com.principe.felipe.finango_d1.databinding.ActivityCardsBinding
+
+
+class CardsActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityCardsBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityCardsBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        val bankName = intent.getStringExtra("bankName")
+        binding.tvBankName.text = bankName
+
+        when (bankName) {
+            "BCP" -> {
+                binding.tvCard1.text = "Tarjeta Visa Clásica BCP\nUna tarjeta básica para compras nacionales e internacionales."
+                binding.tvCard2.text = "Tarjeta Visa Gold BCP\nOfrece beneficios adicionales como seguros de viaje."
+                binding.tvCard3.text = "Tarjeta Visa Signature BCP\nIncluye servicios exclusivos como acceso a salas VIP."
+            }
+            "Scotiabank" -> {
+                binding.tvCard1.text = "Tarjeta Scotia Visa Clásica\nIdeal para el día a día."
+                binding.tvCard2.text = "Tarjeta Scotia Visa Gold\nDescuentos en comercios y seguros de compra."
+                binding.tvCard3.text = "Tarjeta Scotia Travel Visa\nAcumula millas y descuentos en vuelos."
+            }
+        }
+
+        val address = if (bankName == "BCP") {
+            "Av. Carretera Central 111 Nivel 1 Int. LF-3A Lima Map, Santa Anita 15008"
+        } else {
+            "Av. Francisco Bolognesi 290, Santa Anita 15008"
+        }
+
+        binding.btnCard1.setOnClickListener { goToMap(address) }
+        binding.btnCard2.setOnClickListener { goToMap(address) }
+        binding.btnCard3.setOnClickListener { goToMap(address) }
+    }
+
+    private fun goToMap(address: String) {
+        val intent = Intent(this, MapsActivity::class.java)
+        intent.putExtra("address", address)
+        startActivity(intent)
+    }
+}

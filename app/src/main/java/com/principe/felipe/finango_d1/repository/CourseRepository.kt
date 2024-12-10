@@ -3,10 +3,11 @@ package com.principe.felipe.finango_d1.repository
 import android.util.Log
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.principe.felipe.finango_d1.modelos.Comment
-import com.principe.felipe.finango_d1.modelos.Course
-import com.principe.felipe.finango_d1.modelos.Module
-import com.principe.felipe.finango_d1.modelos.Topic
+import com.principe.felipe.finango_d1.modelo.Comment
+
+import com.principe.felipe.finango_d1.model.Course
+import com.principe.felipe.finango_d1.model.Module
+import com.principe.felipe.finango_d1.model.Topic
 import com.principe.felipe.finango_d1.utils.Constants
 import kotlinx.coroutines.tasks.await
 

@@ -1,0 +1,21 @@
+package com.principe.felipe.finango_d1.network
+
+import retrofit2.http.Body
+import retrofit2.http.Headers
+import retrofit2.http.POST
+
+// Request y Response para la API de OpenAI
+data class GPTRequest(
+    val model: String,
+    val messages: List<Map<String, String>>
+)
+
+data class GPTResponse(
+    val choices: List<Map<String, Map<String, String>>>
+)
+
+interface GPTApiService {
+    @Headers("Content-Type: application/json")
+    @POST("chat/completions")
+    suspend fun getGPTResponse(@Body request: GPTRequest): GPTResponse
+}

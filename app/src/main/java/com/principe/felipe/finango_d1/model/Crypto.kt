@@ -1,4 +1,4 @@
-package com.principe.felipe.finango_d1.modelos
+package com.principe.felipe.finango_d1.model
 
 data class Crypto(
     val id: String,

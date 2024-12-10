@@ -1,6 +1,6 @@
 package com.principe.felipe.finango_d1.repository
 
-import com.principe.felipe.finango_d1.modelos.Crypto
+import com.principe.felipe.finango_d1.model.Crypto
 import com.principe.felipe.finango_d1.network.RetrofitClient
 
 class CryptoRepository {

@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.principe.felipe.finango_d1.databinding.ItemCryptoBinding
-import com.principe.felipe.finango_d1.modelos.Crypto
+import com.principe.felipe.finango_d1.model.Crypto
 
 class CryptoAdapter : RecyclerView.Adapter<CryptoAdapter.CryptoViewHolder>() {
 

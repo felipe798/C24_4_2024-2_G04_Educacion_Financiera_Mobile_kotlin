@@ -2,7 +2,7 @@ package com.principe.felipe.finango_d1.ViewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.principe.felipe.finango_d1.modelos.Crypto
+import com.principe.felipe.finango_d1.model.Crypto
 import com.principe.felipe.finango_d1.repository.CryptoRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

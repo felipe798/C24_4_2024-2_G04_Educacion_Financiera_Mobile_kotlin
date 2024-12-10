@@ -1,0 +1,4 @@
+package com.principe.felipe.finango_d1.model
+
+class Bank {
+}
