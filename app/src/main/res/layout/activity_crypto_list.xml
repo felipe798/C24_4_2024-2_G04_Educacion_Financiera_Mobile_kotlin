@@ -1,12 +1,31 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#121212"
     android:padding="16dp">
 
+    <!-- Título para dar contexto -->
+    <TextView
+        android:id="@+id/tvCryptosTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lista de Criptomonedas"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:paddingBottom="16dp" />
+
+    <!-- RecyclerView para mostrar las criptomonedas -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerCryptos"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="16dp" />
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        android:background="@drawable/background_card"
+        android:elevation="4dp"
+        android:padding="8dp" />
 </LinearLayout>

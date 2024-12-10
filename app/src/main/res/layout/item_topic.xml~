@@ -3,29 +3,21 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="12dp"
-    android:background="@drawable/background_card"
-    android:layout_margin="8dp"
-    android:elevation="4dp">
+    android:padding="8dp">
 
-    <!-- Nombre del Tema -->
     <TextView
         android:id="@+id/tvTopicName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nombre del Tema"
+        android:text="Nombre del tema"
         android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="#FFFFFF"
-        android:paddingBottom="4dp" />
+        android:textStyle="bold" />
 
-    <!-- Contenido del Tema -->
     <TextView
         android:id="@+id/tvTopicContent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Contenido del tema"
         android:textSize="16sp"
-        android:textColor="#DDDDDD"
-        android:lineSpacingExtra="4dp" />
+        android:paddingTop="4dp" />
 </LinearLayout>

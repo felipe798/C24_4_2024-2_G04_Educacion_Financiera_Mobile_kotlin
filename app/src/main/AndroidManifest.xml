@@ -47,7 +47,21 @@
         <activity
             android:name=".ui.ChatActivity"
             android:exported="false" />
-        
+
+        <activity
+            android:name=".ui.BanksActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.CardsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MapsActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDEqm88yBjSLkt__DbNEluBMdCzaPPUNCg" />
+
 
 
     </application>

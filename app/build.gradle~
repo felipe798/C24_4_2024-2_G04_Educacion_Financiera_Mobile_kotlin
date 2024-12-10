@@ -98,7 +98,7 @@ dependencies {
     // Google Play Services Location (si necesitas obtener ubicaciones actuales)
     implementation 'com.google.android.gms:play-services-location:21.0.1'
     implementation 'androidx.cardview:cardview:1.0.0'
-
+    
 
 
 

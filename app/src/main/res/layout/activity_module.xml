@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#121212">
 
     <!-- Título para proporcionar contexto a la pantalla -->
     <TextView
@@ -11,9 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Módulos del Curso"
-        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
         android:gravity="center"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginBottom="16dp" />
 
     <!-- RecyclerView para mostrar los módulos -->
     <androidx.recyclerview.widget.RecyclerView
@@ -21,18 +24,27 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:clipToPadding="false"
-        android:scrollbars="vertical" />
+        android:background="#1E1E1E"
+        android:padding="8dp"
+        android:scrollbars="vertical"
+        android:elevation="2dp"
+        android:clipToPadding="false" />
 
     <!-- Botón para ver el examen -->
     <Button
         android:id="@+id/btnExam"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ver Examen"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="?attr/colorPrimary"
-        android:textColor="?android:attr/textColorPrimaryInverse" />
+        android:text="Examen no disponible"
+        android:layout_marginTop="16dp"
+        android:background="#03A9F4"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"
+        android:backgroundTint="#2196F3"
+        android:elevation="4dp"
+        android:layout_marginBottom="8dp"
+
+        android:drawablePadding="8dp"
+        android:gravity="center" />
 
 </LinearLayout>

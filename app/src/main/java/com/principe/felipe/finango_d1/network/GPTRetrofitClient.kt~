@@ -1,0 +1,36 @@
+package com.principe.felipe.finango_d1.network
+
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+
+object GPTRetrofitClient {
+    private const val BASE_URL_OPENAI = "https://api.openai.com/v1/"
+
+    private val loggingInterceptor = HttpLoggingInterceptor().apply {
+        level = HttpLoggingInterceptor.Level.BODY
+    }
+
+    private val httpClient = OkHttpClient.Builder()
+        .addInterceptor(loggingInterceptor)
+        .addInterceptor { chain ->
+            val request = chain.request().newBuilder()
+                .addHeader(
+                    "Authorization",
+                    "" // Cambia esto por tu clave API real.
+                )
+                .build()
+            chain.proceed(request)
+        }
+        .build()
+
+    val instance: GPTApiService by lazy {
+        Retrofit.Builder()
+            .baseUrl(BASE_URL_OPENAI)
+            .client(httpClient)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(GPTApiService::class.java)
+    }
+}

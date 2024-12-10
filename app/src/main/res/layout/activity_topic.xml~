@@ -3,39 +3,32 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#121212"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
     <!-- TextView para mostrar el nombre del módulo -->
     <TextView
         android:id="@+id/tvModuleName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Nombre del Módulo"
-        android:textSize="24sp"
+        android:text="Module Name"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="#FFFFFF"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="16dp"
-        android:gravity="center" />
+        android:layout_margin="16dp" />
 
     <!-- TextView para mostrar la descripción del módulo -->
     <TextView
         android:id="@+id/tvModuleDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Descripción detallada del módulo"
+        android:text="Module Description"
         android:textSize="16sp"
-        android:textColor="#B0BEC5"
-        android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/tvModuleName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp" />
+        android:layout_margin="16dp" />
 
     <!-- RecyclerView para mostrar la lista de topics -->
     <androidx.recyclerview.widget.RecyclerView
@@ -46,9 +39,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_margin="16dp"
-        android:background="#1E1E1E"
-        android:padding="8dp"
-        android:clipToPadding="false"
-        android:elevation="2dp" />
+        android:layout_margin="16dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
