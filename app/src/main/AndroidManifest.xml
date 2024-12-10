@@ -15,8 +15,9 @@
         android:theme="@style/Theme.Finango_d1"
         tools:targetApi="31">
 
+        <!-- Declaración de las actividades -->
         <activity
-            android:name=".UI.HomeActivity"
+            android:name=".ui.HomeActivity"
             android:exported="false" />
         <activity
             android:name=".RegisterActivity"
@@ -32,13 +33,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!-- Actividades adicionales necesarias -->
         <activity
-            android:name=".UI.ModuleActivity"
+            android:name=".ui.ModuleActivity"
             android:exported="false" />
         <activity
-            android:name=".UI.TopicActivity"
+            android:name=".ui.TopicActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.CryptoListActivity"
             android:exported="false" />
 
     </application>

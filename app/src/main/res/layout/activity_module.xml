@@ -5,19 +5,34 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Título para proporcionar contexto a la pantalla -->
+    <TextView
+        android:id="@+id/tvModuleTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Módulos del Curso"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:gravity="center"
+        android:layout_marginBottom="8dp" />
+
     <!-- RecyclerView para mostrar los módulos -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerModules"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:scrollbars="vertical" />
 
+    <!-- Botón para ver el examen -->
     <Button
         android:id="@+id/btnExam"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ver Examen"
-        android:layout_marginTop="16dp" />
-
-
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="?android:attr/textColorPrimaryInverse" />
 
 </LinearLayout>

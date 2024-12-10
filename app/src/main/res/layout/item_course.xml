@@ -20,10 +20,26 @@
         android:text="Descripción del curso"
         android:layout_marginTop="4dp" />
 
-    <Button
-        android:id="@+id/btnEnroll"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ir al curso"
-        android:layout_marginTop="8dp" />
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:gravity="end">
+
+        <!-- Botón para inscribirse en el curso -->
+        <Button
+            android:id="@+id/btnEnroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ir al curso" />
+
+        <!-- Botón para ver comentarios -->
+        <Button
+            android:id="@+id/btnComments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comentarios"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
 </LinearLayout>

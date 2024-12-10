@@ -10,7 +10,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
-import com.principe.felipe.finango_d1.UI.HomeActivity
+import com.principe.felipe.finango_d1.ui.HomeActivity
 import com.principe.felipe.finango_d1.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {

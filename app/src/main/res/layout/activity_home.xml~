@@ -1,25 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     android:padding="16dp">
-
-    <!-- Texto de bienvenida -->
-    <TextView
-        android:id="@+id/tvWelcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="¡Bienvenido a la aplicación!"
-        android:textSize="18sp"
-        android:layout_marginBottom="32dp" />
 
     <!-- Botón para cerrar sesión -->
     <Button
         android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cerrar sesión"
+        android:layout_gravity="end"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Botón para ir a la vista de criptomonedas -->
+    <Button
+        android:id="@+id/btnViewCryptos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cerrar sesión" />
+        android:text="Ver Criptomonedas"
+        android:layout_marginBottom="16dp" />
+
+    <!-- RecyclerView para mostrar los cursos -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerCourses"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    
+
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.principe.felipe.finango_d1.Modelos
+package com.principe.felipe.finango_d1.modelos
 
 data class Module(
     val id: String = "",

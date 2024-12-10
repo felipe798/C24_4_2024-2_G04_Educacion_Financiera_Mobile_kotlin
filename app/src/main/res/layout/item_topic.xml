@@ -3,21 +3,21 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="8dp">
 
     <TextView
         android:id="@+id/tvTopicName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Topic Name"
-        android:textSize="16sp"
+        android:text="Nombre del tema"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvTopicContent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Topic Content"
-        android:textSize="14sp"
-        android:layout_marginTop="8dp" />
+        android:text="Contenido del tema"
+        android:textSize="16sp"
+        android:paddingTop="4dp" />
 </LinearLayout>

@@ -1,14 +1,16 @@
-package com.principe.felipe.finango_d1.UI
+package com.principe.felipe.finango_d1.ui
 
-
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.principe.felipe.finango_d1.modelos.Course
 import com.principe.felipe.finango_d1.databinding.ItemCourseBinding
-import com.principe.felipe.finango_d1.Modelos.Course
 
-class CourseAdapter(private val onEnrollClick: (String) -> Unit) :
-    RecyclerView.Adapter<CourseAdapter.CourseViewHolder>() {
+class CourseAdapter(
+    private val context: Context,
+    private val onEnrollClick: (String) -> Unit
+) : RecyclerView.Adapter<CourseAdapter.CourseViewHolder>() {
 
     private val courses = mutableListOf<Course>()
 

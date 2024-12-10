@@ -1,4 +1,4 @@
-package com.principe.felipe.finango_d1.UI
+package com.principe.felipe.finango_d1.ui
 
 import android.os.Bundle
 import android.util.Log
@@ -17,18 +17,22 @@ import kotlinx.coroutines.launch
 class TopicActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityTopicBinding
-    private val viewModel: CourseViewModel by viewModels { CourseViewModelFactory(CourseRepository()) }
+    private val viewModel: CourseViewModel by viewModels {
+        CourseViewModelFactory(CourseRepository())
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityTopicBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Obtener COURSE_ID y MODULE_ID desde el intent
         val courseId = intent.getStringExtra("COURSE_ID") ?: run {
             Log.e("TopicActivity", "No COURSE_ID provided in intent")
             finish()
             return
         }
+
         val moduleId = intent.getStringExtra("MODULE_ID") ?: run {
             Log.e("TopicActivity", "No MODULE_ID provided in intent")
             finish()
@@ -37,46 +41,33 @@ class TopicActivity : AppCompatActivity() {
 
         Log.d("TopicActivity", "Received COURSE_ID: $courseId, MODULE_ID: $moduleId")
 
-        // Configura el RecyclerView
+        // Configurar el adaptador para la lista de topics
         val adapter = TopicAdapter()
         binding.recyclerTopics.layoutManager = LinearLayoutManager(this)
         binding.recyclerTopics.adapter = adapter
 
-        // Observa los datos del módulo y actualiza la interfaz
+        // Observa los cambios en los módulos y actualiza el encabezado
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.modules.collect { modules ->
                     val module = modules[moduleId]
-                    if (module != null) {
-                        binding.tvModuleName.text = module.name
-                        binding.tvModuleDescription.text = module.description
-                    } else {
-                        Log.e("TopicActivity", "Module not found for moduleId: $moduleId")
-                        binding.tvModuleName.text = "Módulo no encontrado"
-                        binding.tvModuleDescription.text = ""
-                    }
+                    binding.tvModuleName.text = module?.name ?: "Módulo no encontrado"
+                    binding.tvModuleDescription.text = module?.description ?: ""
                 }
             }
         }
 
-        // Observa los datos de los temas y actualiza el adaptador
+        // Observa los cambios en los topics y actualiza la lista
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.topics.collect { topics ->
-                    val moduleTopics = topics.values.toList()
-                    if (moduleTopics.isNotEmpty()) {
-                        adapter.submitList(moduleTopics)
-                    } else {
-                        Log.e("TopicActivity", "No topics found for moduleId: $moduleId")
-                        adapter.submitList(emptyList())
-                    }
+                    adapter.submitList(topics.values.toList())
                 }
             }
         }
 
-        // Carga los datos necesarios desde Firebase
-        Log.d("TopicActivity", "Loading module and topics from Firebase for courseId: $courseId, moduleId: $moduleId")
-        viewModel.loadModules(courseId) // Carga los módulos
-        viewModel.loadTopicsFromFirebase(courseId, moduleId) // Carga los temas del módulo
+        // Cargar datos del módulo y los topics
+        viewModel.loadModules(courseId)
+        viewModel.loadTopicsFromFirebase(courseId, moduleId)
     }
 }

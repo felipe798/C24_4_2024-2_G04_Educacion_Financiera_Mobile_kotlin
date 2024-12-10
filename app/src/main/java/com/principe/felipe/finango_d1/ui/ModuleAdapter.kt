@@ -1,10 +1,10 @@
-package com.principe.felipe.finango_d1.UI
+package com.principe.felipe.finango_d1.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.principe.felipe.finango_d1.databinding.ItemModuleBinding
-import com.principe.felipe.finango_d1.Modelos.Module
+import com.principe.felipe.finango_d1.modelos.Module
 
 class ModuleAdapter(private val onClick: (String) -> Unit) :
     RecyclerView.Adapter<ModuleAdapter.ModuleViewHolder>() {

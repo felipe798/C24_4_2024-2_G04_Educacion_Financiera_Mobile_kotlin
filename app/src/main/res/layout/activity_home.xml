@@ -14,9 +14,19 @@
         android:layout_gravity="end"
         android:layout_marginBottom="16dp" />
 
+    <!-- Botón para ir a la vista de criptomonedas -->
+    <Button
+        android:id="@+id/btnViewCryptos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver Criptomonedas"
+        android:layout_marginBottom="16dp" />
+
     <!-- RecyclerView para mostrar los cursos -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerCourses"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+
 </LinearLayout>
