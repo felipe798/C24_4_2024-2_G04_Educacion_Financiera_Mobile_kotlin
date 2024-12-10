@@ -8,6 +8,8 @@
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
 .DS_Store
+app/src/main/java/com/principe/felipe/finango_d1/network/GPTRetrofitClient.kt
+
 /build
 /captures
 .externalNativeBuild
